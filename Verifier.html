@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script
+    src="https://kit.fontawesome.com/eecc9ab967.js"
+    crossorigin="anonymous"
+  ></script>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #header {
+            background-color:#1d398e ;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #header h1 {
+            margin: 0 10px; /* Adjust the spacing between links */
+          text-decoration: none;
+          font-size: 1.5rem;
+            font-weight: 600;
+            /* color: navy;*/
+          color: #fff;
+            transition: all 0.3s;
+            margin: 0 20px rgb(19, 19, 19);
+            text-shadow: 2px 2px 5px rgb(17, 17, 17);
+
+        }
+        .main{
+            max-width: 100%;
+          width: 100%;
+          /* padding: 30%; */
+          height: 5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           0vh;
+          
+          position: relative;
+          /* min-height: 100%; */
+          z-index: 1;
+          background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+            url(iiserb_weather.jpeg);
+          background-size: cover;
+          overflow: hidden;
+          min-height: 500px;
+          max-height: 1080px;
+       
+          /* animation: slider 19s infinite ease; */
+}
+
+        #login-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 20px;
+            width: 80%;
+            max-width: 400px; /* Limit maximum width for responsiveness */
+            box-sizing: border-box;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .input-group .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .input-group .btn:hover {
+            background-color: #45a049;
+        }
+
+        #logo {
+            width: 100px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .input-group .btn:focus {
+            outline: none;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            max-width: 400px;
+            margin-top: 20px;
+            margin: 10px;
+         
+        }
+
+        .button-container button  {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+           
+            background-color: #1d398e;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid white;
+            width: 45%;
+            margin: 10%;
+            box-shadow: 0 0px 12px rgba(0, 0, 0, 0.3), 0 0 80px rgba(0, 0, 0, 0.1) ;
+        }
+      
+        .button-container button a{
+            display: flex;
+            text-decoration: none;
+            color: #fff;
+        }
+        .button-container button a i{
+            display: flex;
+            margin-right: 5px;
+        }
+        
+
+
+        @media (max-width: 500px) {
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .button-container button {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+
+            }
+        }
+    </style>
+</head>
+<body class="main">
+    <div id="header">
+        <h1>Sign-in to IISER Bhopal Placement Portal</h1>
+    </div>
+<div>
+    <div id="login-container">
+        <h1>Verifier Login</h1>
+        <img id="logo" src="logo.png" height="100px" alt="Logo">
+        <div class="input-group">
+            <label for="username" aria-placeholder="fddf">Username</label>
+            <input type="text" id="username" class="input-field">
+        </div>
+
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="input-field">
+        </div>
+
+        <div class="input-group">
+            <input type="submit" value="Login" class="btn">
+        </div>
+    </div>
+    <div class="button-container">
+        <button><a href="index.html"><i class="fa-solid fa-circle-arrow-left"></i>Back</a></button>
+        <button><a  href="login.html"><i class="fa-solid fa-user"></i>Student</a></button>
+        <button><a  href="Recruiter.html"><i class="fa-solid fa-briefcase"></i>Recruiter</a></button>
+        <button><a href="Coordinator.html"><i class="fa-solid fa-cube"></i>Coordinator</a></button>
+        <button><a  href="Verifier.html"><i class="fa-solid fa-circle-check"></i>Verifier</a></button>
+    </div>
+</div>
+    <script>
+        const loginBtn = document.querySelector('.btn');
+
+        loginBtn.addEventListener('click', function() {
+            alert('Login Successful');
+            window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdaOfRvk2TUYQpcMZ4sJoZ9VaPSmN2Idf2hVd0vk3M_dfNSPg/viewform?usp=send_form';
+        });
+    </script>
+</body>
+</html>
