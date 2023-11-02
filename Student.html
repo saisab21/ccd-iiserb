@@ -16,11 +16,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+          
         }
 
         #header {
-            background-color:#1d398e ;
-            color: white;
+            background-color: rgba(43, 43, 43, 0.5);
+           
             text-align: center;
             padding: 20px;
             width: 100%;
@@ -40,25 +41,22 @@
 
         }
         .main{
-            max-width: 100%;
-          width: 100%;
-          /* padding: 30%; */
-          height: 5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           0vh;
-          
-          position: relative;
+        max-width: 100%;
+        width: 100%;
+        height: 80px; /* Height reduced to 80px */
+        position: relative;
           /* min-height: 100%; */
-          z-index: 1;
           background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-            url(iiserb_weather.jpeg);
-          background-size: cover;
-          overflow: hidden;
-          min-height: 500px;
-          max-height: 1080px;
+                    url(iiserb_weather.jpeg);
+        background-size: cover;
+        overflow: hidden;
+      
        
           /* animation: slider 19s infinite ease; */
 }
 
         #login-container {
+            
             background-color: #fff;
             padding: 40px;
             border-radius: 8px;
@@ -126,8 +124,8 @@
             padding: 10px;
             border: none;
             border-radius: 5px;
+            background-color: rgba(43, 43, 43, 0.5);
            
-            background-color: #1d398e;
             color: white;
             font-size: 16px;
             font-weight: 600;
@@ -148,20 +146,34 @@
             margin-right: 5px;
         }
         
-
-
-        @media (max-width: 500px) {
+        @media (max-width: 786px) {
             .button-container {
                 flex-direction: column;
                 align-items: center;
+                width: 100%;
             }
+
             .button-container button {
-                display: block;
                 width: 100%;
                 margin-bottom: 10px;
-
             }
+
+            #login-container {
+                padding: 40px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                margin: 20px;
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+            }
+  
+        .main{
+            background-image: none;
         }
+    }
+
     </style>
 </head>
 <body class="main">
@@ -183,13 +195,14 @@
         </div>
 
         <div class="input-group">
-            <input type="submit" value="Login" class="btn">
+            <input type="submit" value="Login" class="btn" id="loginBtn">
+            <p id="loginResult"></p>
         </div>
     </div>
     <div class="button-container">
         <button><a href="index.html"><i class="fa-solid fa-circle-arrow-left"></i>Back</a></button>
-        <button><a  href="login.html"><i class="fa-solid fa-user"></i>Student</a></button>
-        <button><a  href="Recruiter.html"><i class="fa-solid fa-briefcase"></i>Recruiter</a></button>
+        <button><a  href="Student.html"><i class="fa-solid fa-user"></i>Student</a></button>
+        <button><a  href="#"><i class="fa-solid fa-briefcase"></i>Recruiter</a></button>
         <button><a href="Coordinator.html"><i class="fa-solid fa-cube"></i>Coordinator</a></button>
         <button><a  href="Verifier.html"><i class="fa-solid fa-circle-check"></i>Verifier</a></button>
     </div>
@@ -198,9 +211,13 @@
         const loginBtn = document.querySelector('.btn');
 
         loginBtn.addEventListener('click', function() {
-            alert('Login Successful');
+              // Display success message
+        loginResult.textContent = 'Login Successful';
+        loginResult.style.color = 'green';
             window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdaOfRvk2TUYQpcMZ4sJoZ9VaPSmN2Idf2hVd0vk3M_dfNSPg/viewform?usp=send_form';
         });
+
+        
     </script>
 </body>
 </html>

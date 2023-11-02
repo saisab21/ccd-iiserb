@@ -214,7 +214,7 @@ body {
   }
   .register {
     padding: 8px;
-      background-color: #4CAF50;
+    
       background-color: #1d398e; /* Background color */
       border: 1px solid #ddd;
       border-radius: 5px;
@@ -347,6 +347,7 @@ body {
            .logo{
             max-width: 35px;
            }
+        
            
         }
         
@@ -460,7 +461,7 @@ body {
           border: none;
           border-radius: 5px;
          /* background-color: #fff7e0;  /* Change the color as needed */
-         background-color: rgba(43, 43, 43, 0.5);
+         background-color: rgba(27, 27, 27, 0.5);
           /*color: navy; */
           color: #fff;
           font-size: 3rem ;
@@ -523,7 +524,10 @@ body {
          fill:#fff;
         
         }
-       
+     .celllogo{
+  
+      max-width: 30%;
+     }
         
         /* Media queries for responsiveness */
 @media (max-width: 768px) {
@@ -534,6 +538,7 @@ body {
     display: block;
  
   }
+
   
 
   .buttons {
@@ -564,6 +569,7 @@ body {
   padding: 10px;
   color: rgb(19, 19, 19);
   margin: 10px;
+ 
 }
 
 
@@ -583,6 +589,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background: #f9f9f9;
   transition: transform 0.3s, box-shadow 0.3s;
+  
 }
 .mat-card-title{
   font-size: 20px;
@@ -667,9 +674,13 @@ body {
     border-radius: 5px;
     position: relative;
   }
+ p.des{
+
+     font-size: 2px;
+  }
   
   .close {
-    color: #aaa;
+    color: #1d398e;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -683,20 +694,19 @@ body {
   }
 /* Media Query for Responsive Design */
 @media (min-width: 768px) {
-  .academics-class {
-    gap: 30px;
-  }
+
 
   .col-md-4 {
     width: 32%;
     max-width: none;
   }
+
 }
 
 
 
 /* Styling for the entire section */
-#why-iitb {
+#why-iiserb {
   background-color: #1d398e;
   padding: 50px 0;
   width: 100%;
@@ -704,36 +714,63 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+#rp {
+  background-color: #1d398e;
+  padding: 30px 0;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
 
-#why-iitb h1 {
-  font-size: 2.5em;
+#why-iiserb h1 {
+  font-size: 3.5em;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+#rp h1 {
+  font-size: 3.5em;
   color: #fff;
   width: 100%;
   text-align: center;
 }
 
-#why-iitb .col-md-12 p {
+#why-iiserb .col-md-12 p {
   font-size: 1.4em;
   line-height: 1.5;
   color: #fff;
   width: 100%;
   text-align: center;
   margin: 10px;
-  padding: 85px;
+  padding: 25px;
   padding-top: 10px;
   padding-bottom: 15px;
 }
+#rp .col-md-12 p {
+  font-size: 1.4em;
+  line-height: 1.5;
+  color: #b04444;
+  width: 100%;
+  text-align: center;
+  margin: 10px;
+  padding: 25px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Adjust the gap between items */
-  justify-content: center;
-}
 
-.col-md-3 {
+  justify-content: center;
+
+}
+.process {
   flex: 1 0 300px; /* Adjust the width of each item */
   padding: 20px;
-  
+  padding-top: 0px;
+  background-color: rgba(117, 117, 117, 0.5);
   border-radius: 8px;
   color: #ffffff;
   text-align: center;
@@ -742,6 +779,28 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: larger;
+  margin: 20px;
+ 
+  
+}
+.process:hover{
+  transform: scale(1.1);
+  transform: 0.5s;
+}
+
+.col-md-3 {
+  flex: 1 0 300px; /* Adjust the width of each item */
+  padding: 20px;
+  background-color: rgba(117, 117, 117, 0.5);
+  border-radius: 8px;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: larger;
+  margin: 20px;
 }
 
 .col-md-3 h2 {
@@ -771,8 +830,54 @@ body {
 }
 
 .col-md-3 button:hover {
-  background-color: #0d1a4d;
+  background-color: #ababab;
 }
+
+/* Style the modal container */
+.modal {
+  display: none; /* Hide the modal by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Style the modal content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+}
+
+/* Style the close button (×) */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Style the content inside the modal */
+.modal-content p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
 
 
 /* Styling for the "Know more" button in each section */
@@ -831,12 +936,17 @@ mat-raised-button:hover {
   justify-content: center;
 
 }
+.mat-button-wrapper-director {
+  text-decoration: none;
+  color: white;
+}
 
 .director-name {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .director-role {
+  font-size: 1.2rem;
   color: #888;
 }
 
@@ -907,6 +1017,7 @@ mat-raised-button:hover {
 .page-wrapper img:hover{
     box-shadow: 0 0 20px 9px rgba(0,0,0,0.03);
     transform: scale(2.5);
+    transition: 0.5s;
     border-radius: 8%;
     padding: 3px;
     background-color: #bbeeff;
@@ -951,16 +1062,19 @@ mat-raised-button:hover {
 }
 .tabcontent h1 {
   
-  margin-top: 30px; 	
+ /* margin-top: 30px; 	
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
 font-size: 2.8rem;
 text-transform: uppercase;
 font-weight: 800;
-margin-bottom: 5px;
-color: #003b77;
+margin-bottom: 5px; */
+margin-top: 30px;
 text-align: center;
 text-decoration: double;
- 
+font-size: 3.5em;
+color: #003b77;
+width: 100%;
+text-align: center;
 
 
 }
@@ -1035,6 +1149,11 @@ h1:hover {
 .mem-contact span{
     padding: 6px 8px;
 }
+p.phonenumber{
+  display: none;
+ margin: 2px;
+ font-size: 15px;
+}
 .page-wrapper .mem-contact:hover{
   border: 0.5px solid #444;
   cursor:  pointer;
@@ -1083,8 +1202,12 @@ h1:hover {
    text-decoration: none;
    margin-right: 6px;
  }
+ a.fb:hover .phonenumber{
+  display: block;
+ }
 
- .mem-social .phone:hover{
+ .mem-social .phone:hover {
+ 
    background: #090050;
    color: white;
    cursor:  pointer;
@@ -1361,33 +1484,9 @@ h1:hover {
   background: var(--accent);
 }
 
-/* .heading {
-  text-decoration: none;
-  font-weight: 200px;
-  color: #A58E74;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  text-shadow: #333333;
-} */
-/* .social-media {
-  width: 100%;
-  color: #fff;
-  text-align: center;
-  font-size: 20px;
+.footer-bottom a svg{
+  height: 18px;
 }
-.social-media a {
-  text-decoration: none;
-}
-.social-media i {
-  height: 25px;
-  width: 25px;
-  margin: 20px 10px;
-  padding: 4px;
-  color: #fff;
-  transition: 0.5s;
-}
-.social-media i:hover {
-  transform: scale(1.5);
-} */
 .footer-bottom {
   padding: 10px;
   background: var(--footer-background-color);
@@ -1396,15 +1495,20 @@ h1:hover {
   font-size: 12px;
   text-align: center;
 }
+.footer-bottom a svg :hover{
+  transform: scale(2.03);
+}
 
 .scroll-top-button {
-  background: var(--footer-scroll-top-color);
+  background-color: rgba(79, 79, 79, 0.5);
   transition: transform 0.5s;
   -webkit-transition: transform 0.5s;
   font-size: 20px;
   max-width: 300px;
   float: right;
   text-align: center;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 .scroll-top-button:hover {

@@ -22,6 +22,16 @@ mobile_nav.addEventListener("click", () => toggleNavbar());
   }
  });
 
+ const header = document.querySelector('.header');
+ const  register = document.querySelector(".register");
+ window.addEventListener('scroll', () => {
+   if (window.scrollY >= 56) {
+    register.style.backgroundColor = '#4CAF50'; // Change to a different color on scroll
+   } else {
+    register.style.backgroundColor = '#1d398e'; // Change back to the original color when scrolled back up
+   }
+ });
+
 
  //pop-up
 // Get all elements for pop-up modal
@@ -54,6 +64,50 @@ popups.forEach((popup) => {
     }
   });
 });
+
+// Get all the "Know more" buttons
+const knowMoreButtons = document.querySelectorAll('.mat-raised-button');
+
+// Loop through each button and attach a click event listener
+knowMoreButtons.forEach((button, index) => {
+    button.addEventListener('click', function() {
+        // Display the specific modal
+        const modalId = `popupModal${index }`;
+        const modal = document.getElementById(modalId);
+        modal.style.display = 'block';
+
+        // Set the content of the modal based on the button's position
+        const modalContent = document.getElementById(`modalContent${index + 1}`);
+        // Simulate content for demonstration purposes
+        const contents = [
+            "Content for Alumni section.",
+            "Content for Rankings section.",
+            "Content for admission section.",
+            "Content for development section."
+            // Add content for Admission Process and All Round Development sections
+        ];
+        modalContent.textContent = contents[index];
+    });
+});
+
+// Close the modals when the user clicks the close button (×)
+document.querySelectorAll('.close').forEach(closeBtn => {
+    closeBtn.addEventListener('click', function() {
+        const modal = closeBtn.parentElement.parentElement;
+        modal.style.display = 'none';
+    });
+});
+
+// Close the modals when the user clicks outside the modals
+window.addEventListener('click', function(event) {
+    knowMoreButtons.forEach((button, index) => {
+        const modal = document.getElementById(`popupModal${index + 1}`);
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+
 
 
 

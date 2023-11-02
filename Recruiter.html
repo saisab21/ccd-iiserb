@@ -19,8 +19,8 @@
         }
 
         #header {
-            background-color:#1d398e ;
-            color: white;
+            background-color: rgba(43, 43, 43, 0.5);
+           
             text-align: center;
             padding: 20px;
             width: 100%;
@@ -127,7 +127,7 @@
             border: none;
             border-radius: 5px;
            
-            background-color: #1d398e;
+            background-color: rgba(43, 43, 43, 0.5);
             color: white;
             font-size: 16px;
             font-weight: 600;
@@ -188,8 +188,8 @@
     </div>
     <div class="button-container">
         <button><a href="index.html"><i class="fa-solid fa-circle-arrow-left"></i>Back</a></button>
-        <button><a  href="login.html"><i class="fa-solid fa-user"></i>Student</a></button>
-        <button><a  href="Recruiter.html"><i class="fa-solid fa-briefcase"></i>Recruiter</a></button>
+        <button><a  href="Student.html"><i class="fa-solid fa-user"></i>Student</a></button>
+        <button><a  href="#"><i class="fa-solid fa-briefcase"></i>Recruiter</a></button>
         <button><a href="Coordinator.html"><i class="fa-solid fa-cube"></i>Coordinator</a></button>
         <button><a  href="Verifier.html"><i class="fa-solid fa-circle-check"></i>Verifier</a></button>
     </div>
@@ -198,7 +198,9 @@
         const loginBtn = document.querySelector('.btn');
 
         loginBtn.addEventListener('click', function() {
-            alert('Login Successful');
+             // Display success message
+        loginResult.textContent = 'Login Successful';
+        loginResult.style.color = 'green';
             window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdaOfRvk2TUYQpcMZ4sJoZ9VaPSmN2Idf2hVd0vk3M_dfNSPg/viewform?usp=send_form';
         });
     </script>

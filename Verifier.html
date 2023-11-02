@@ -19,8 +19,8 @@
         }
 
         #header {
-            background-color:#1d398e ;
-            color: white;
+            background-color: rgba(43, 43, 43, 0.5);
+           
             text-align: center;
             padding: 20px;
             width: 100%;
@@ -127,7 +127,7 @@
             border: none;
             border-radius: 5px;
            
-            background-color: #1d398e;
+            background-color: rgba(43, 43, 43, 0.5);
             color: white;
             font-size: 16px;
             font-weight: 600;
@@ -183,24 +183,38 @@
         </div>
 
         <div class="input-group">
-            <input type="submit" value="Login" class="btn">
+            <input type="submit" value="Login" class="btn" id="loginBtn">
+            <p id="loginResult"></p>
         </div>
     </div>
     <div class="button-container">
         <button><a href="index.html"><i class="fa-solid fa-circle-arrow-left"></i>Back</a></button>
-        <button><a  href="login.html"><i class="fa-solid fa-user"></i>Student</a></button>
-        <button><a  href="Recruiter.html"><i class="fa-solid fa-briefcase"></i>Recruiter</a></button>
+        <button><a  href="Student.html"><i class="fa-solid fa-user"></i>Student</a></button>
+        <button><a  href="#"><i class="fa-solid fa-briefcase"></i>Recruiter</a></button>
         <button><a href="Coordinator.html"><i class="fa-solid fa-cube"></i>Coordinator</a></button>
         <button><a  href="Verifier.html"><i class="fa-solid fa-circle-check"></i>Verifier</a></button>
     </div>
 </div>
     <script>
-        const loginBtn = document.querySelector('.btn');
+         const loginBtn = document.getElementById('loginBtn');
+const loginResult = document.getElementById('loginResult');
 
-        loginBtn.addEventListener('click', function() {
-            alert('Login Successful');
-            window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdaOfRvk2TUYQpcMZ4sJoZ9VaPSmN2Idf2hVd0vk3M_dfNSPg/viewform?usp=send_form';
-        });
+loginBtn.addEventListener('click', function() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username === 'i' && password === 'p') {
+        // Display success message
+        loginResult.textContent = 'Login Successful';
+        loginResult.style.color = 'green';
+        // Redirect to link.html on successful login
+        window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdaOfRvk2TUYQpcMZ4sJoZ9VaPSmN2Idf2hVd0vk3M_dfNSPg/viewform?usp=send_form';
+    } else {
+        // Display error message
+        loginResult.textContent = 'Invalid credentials. Please try again.';
+        loginResult.style.color = 'red';
+    }
+});
     </script>
 </body>
 </html>
