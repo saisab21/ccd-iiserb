@@ -221,8 +221,8 @@ body {
       box-shadow: 0 0px 12px rgba(0, 0, 0, 0.3), 0 0 80px rgba(0, 0, 0, 0.1) ;
   }
  .dropdown .navbar-link:after{
-   
-    background-color:  #1d398e;
+  bottom:-2px;
+    background-color:  #ffffff;
     
   }
         /* ===========================================
@@ -666,7 +666,8 @@ body {
   
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
+ 
+    margin-top: 40px;
     padding: 20px;
     border: 1px solid #888;
     width: 70%;
