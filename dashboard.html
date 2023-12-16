@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav {
+      background-color: #444;
+      color: #fff;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav li {
+      margin: 0 15px;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      margin: 20px 0;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>User Dashboard</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#" id="home">Home</a></li>
+      <li><a href="#" id="profile">Profile</a></li>
+      <li><a href="#" id="settings">Settings</a></li>
+      <li><a href="#" id="logout">Logout</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="homeSection">
+      <h2>Welcome to your Dashboard</h2>
+      <p>This is the home section of your dashboard.</p>
+    </section>
+
+    <section id="profileSection" style="display: none;">
+      <h2>Your Profile</h2>
+      <!-- Add profile information here -->
+    </section>
+
+    <section id="settingsSection" style="display: none;">
+      <h2>Account Settings</h2>
+      <!-- Add settings options here -->
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2023 User Dashboard
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const homeSection = document.getElementById('homeSection');
+      const profileSection = document.getElementById('profileSection');
+      const settingsSection = document.getElementById('settingsSection');
+
+      document.getElementById('home').addEventListener('click', function() {
+        showSection(homeSection);
+      });
+
+      document.getElementById('profile').addEventListener('click', function() {
+        showSection(profileSection);
+      });
+
+      document.getElementById('settings').addEventListener('click', function() {
+        showSection(settingsSection);
+      });
+
+      document.getElementById('logout').addEventListener('click', function() {
+        // Implement logout logic here
+        alert('Logout clicked!');
+      });
+
+      function showSection(section) {
+        homeSection.style.display = 'none';
+        profileSection.style.display = 'none';
+        settingsSection.style.display = 'none';
+
+        section.style.display = 'block';
+      }
+    });
+  </script>
+
+</body>
+</html>
